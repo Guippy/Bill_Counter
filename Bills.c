@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void ChoseBills();
+void ChoseBills(int[]);
 void CountBills(int, int[]);
 
 
 
 int main(void){
 int Option;
+int Bills[] = {1, 1, 1, 1, 1, 1, 1};
 char Command[] = "cls";
 while(1){
 printf("\nCount bills(1)\nClear(2)\nExit(3)\n");
 scanf("%d", &Option);
 switch(Option){
     case 1:
-        ChoseBills();
+        ChoseBills(Bills);
         break;
     case 2:
         system(Command);
@@ -29,9 +30,8 @@ return 0;
 
 
 
-void ChoseBills(){
+void ChoseBills(int Bills[]){
 //100 50 20 10 5 2 1
-int Bills[] = {1, 1, 1, 1, 1, 1, 1};
 int Index;
 int Value;
 char Command[] = "cls";
